@@ -1,0 +1,130 @@
+@use 'variables' as v
+@use 'mixins' as m
+
+footer
+    margin-top: 200px
+
+    .footer-bg-top
+        width: 100%
+        height: 53px
+        background-image: url('/images/bg-footer-top-mobile.svg')
+        background-repeat: no-repeat
+        background-position: cover
+
+        @include m.large
+            height: 158px
+            background-image: url('/images/bg-footer-top-desktop.svg')
+
+
+    .footer-second-container
+        display: flex
+        flex-direction: column
+        gap: 80px
+        padding: 50px 30px
+        background-color: v.$Very-Dark-Cyan
+
+        h4
+            color: white
+            font-size: 1.9rem
+            text-transform: uppercase
+
+        p
+            margin-top: 16px
+            padding-right: 20px
+            color: white
+            font-size: 1.4rem
+            line-height: 22px
+
+            @include m.large
+                width: 340px
+
+        .input-button-container
+            margin-top: 25px
+            display: flex
+            gap: 14px
+            flex-direction: column
+
+            input
+                width: 100%
+                height: 38px
+                padding: 4px
+                border: none
+                border-radius: 4px
+                font-size: 1.7rem
+                outline-style: none
+            
+            button
+                margin-left: auto
+                width: 150px
+                height: 38px
+                background-color: v.$Pink
+                border: none
+                border-radius: 4px
+                color: white
+                font-size: 1.5rem
+                font-weight: 600
+
+                &:hover
+                    cursor: pointer
+                    background-color: v.$Light-Pink
+
+            .error, .thanks
+                margin-top: 5px
+                width: 200px
+                color: v.$Light-Red
+                font-size: 1.3rem
+
+            .thanks
+                color: lightgreen
+
+            @include m.large
+                margin-top: 40px
+                flex-direction: row
+
+                input
+                    width: 260px
+
+                button
+                    margin-left: 10px
+
+        
+        @include m.large
+            padding: 160px 100px 60px 100px
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
+
+    .logo-footer
+        width: 170px
+
+    .phone-container, .email-container
+        margin-top: 20px
+        width: 100%
+        display: flex
+        align-items: center
+
+        img
+            margin: 14px 20px 0 0
+            width: 20px
+
+        @include m.large
+            margin-top: 8px
+
+    .social-media-container
+        margin-top: 40px
+        width: 105px
+        display: flex
+        justify-content: space-between
+
+        @include m.large
+                width: 125px
+        i
+            color: white
+            font-size: 2.5rem
+
+            &:hover
+                cursor: pointer
+                color: #00CBFB
+
+            @include m.large
+                font-size: 2.8rem

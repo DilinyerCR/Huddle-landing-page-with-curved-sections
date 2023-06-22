@@ -1,0 +1,27 @@
+@use 'variables' as v
+@use 'mixins' as m
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-family: v.$body-font
+    font-size: 1.6rem
+
+.main-container
+    margin: 0 auto
+    min-width: 360px
+    max-width: 375px
+
+
+    @include m.large
+        min-width: 1280px
+        max-width: 1440px
+    
+
+

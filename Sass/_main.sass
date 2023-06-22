@@ -1,0 +1,304 @@
+@use 'variables' as v
+@use 'mixins' as m
+
+// !==========Section # 1==========
+.section-one
+    margin-top: 100px
+    padding: 0 30px
+    text-align: center
+
+    h1
+        color: v.$Very-Dark-Cyan
+        font-family: v.$heading-font
+        font-size: 2.6rem
+
+    p
+        margin-top: 35px
+        color: v.$Very-Dark-Cyan
+        font-size: 1.5rem
+        font-weight: 500
+        line-height: 20px
+
+    button
+        margin-top: 50px
+        width: 200px
+        height: 40px
+        border: none
+        border-radius: 50px
+        background-color: v.$Pink
+        color: white
+        font-weight: 600
+        font-size: 1.1rem
+
+        &:hover
+            cursor: pointer
+            background-color: v.$Light-Pink
+
+    @include m.large
+            h1
+                font-size: 4.5rem
+
+            p
+                margin: 40px auto
+                width: 510px
+                font-size: 1.8rem
+                line-height: 25px
+
+            button
+                margin-top: 5px
+                width: 340px
+                height: 55px
+                font-size: 1.5rem
+
+
+// !==========Section # 2==========
+.section-two
+    margin-top: 100px
+    padding: 0 30px
+
+    img
+        width: 100%
+
+    .statistics
+        margin-top: 100px
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        img
+            width: 30px
+        
+        .numbers
+            color: v.$Very-Dark-Cyan
+            font-size: 5.8rem
+            font-weight: 600
+
+        .messages
+            margin-top: 100px
+
+        .statistics__text
+            margin-top: 6px
+            color: v.$Very-Dark-Cyan
+            font-size: 1.3rem
+
+        .statistics__text-center
+            margin-top: 6px
+            color: v.$Very-Dark-Cyan
+            font-size: 1.3rem
+            text-align: center
+
+    @include m.large
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        img
+            width: 900px
+
+        .statistics
+            width: 700px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            .communities, .messages
+                margin: 0
+                padding: 0
+
+                .numbers
+                    font-size: 9rem
+
+                img
+                    width: 60px
+
+// !==========Section # 3==========
+.section-tree
+    margin: 100px 0
+
+    img
+        width: 100%
+
+    // !=====part one=====
+    .part-one__bg-top
+        width: 100%
+        height: 112px
+        background-image: url('/images/bg-section-top-mobile-1.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+        @include m.large
+            height: 130px
+            background-image: url('/images/bg-section-top-desktop-1.svg')
+
+    .part-one__img-text-container
+        padding: 0 35px
+        text-align: center
+        background-color: v.$Very-Pale-Blue
+
+        .img-text-container__text
+            padding: 0 0 50px 0
+            color: v.$Very-Dark-Cyan
+
+            h3
+                margin-top: 70px
+
+            p
+                margin-top: 16px
+                font-size: 1.4rem
+                line-height: 19px
+
+            @include m.large
+                padding: 0 80px
+                text-align: left
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+        @include m.large
+            display: flex
+            flex-direction: row-reverse
+
+            h3
+                font-size: 4rem
+
+            p
+                width: 435px
+                font-size: 2rem
+
+    .part-one__bg--bottom
+        width: 100%
+        height: 48px
+        background-image: url('/images/bg-section-bottom-mobile-1.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+        @include m.large
+            height: 120px
+
+            background-image: url('/images/bg-section-bottom-desktop-1.svg')
+
+    // !=====part two=====
+    .part-two__img-text-container
+        margin-top: 120px
+        padding: 0 35px
+        text-align: center
+
+        @include m.large
+            margin-top: 150px
+            display: flex
+
+        .img-text-container__text
+            padding: 0 0 50px 0
+            color: v.$Very-Dark-Cyan
+
+            h3
+                margin-top: 70px
+
+            p
+                margin-top: 16px
+                font-size: 1.4rem
+                line-height: 19px
+
+            @include m.large
+                padding: 0 80px
+                text-align: left
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                h3
+                    font-size: 4rem
+
+    // !=====part tree=====
+    .part-tree__bg-top
+        width: 100%
+        height: 112px
+        background-image: url('/images/bg-section-top-mobile-2.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+        @include m.large
+            margin-top: 150px
+            height: 130px
+            background-image: url('/images/bg-section-top-desktop-2.svg')
+    
+    .part-tree__img-text-container
+        padding: 0 35px
+        text-align: center
+        background-color: v.$Very-Pale-Blue
+
+        .img-text-container__text
+            padding: 0 0 110px 0
+            color: v.$Very-Dark-Cyan
+
+            h3
+                margin-top: 70px
+
+            p
+                margin-top: 16px
+                font-size: 1.4rem
+                line-height: 19px
+
+            @include m.large
+                padding: 0 80px
+                text-align: left
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+        @include m.large
+            display: flex
+            flex-direction: row-reverse
+
+            h3
+                font-size: 4rem
+
+            p
+                width: 435px
+                font-size: 2rem
+
+    .part-tree__bg--bottom
+        width: 100%
+        height: 100px
+        background-image: url('/images/bg-section-bottom-mobile-2.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+        @include m.large
+            height: 150px
+            background-image: url('/images/bg-section-bottom-desktop-2.svg')
+
+
+// !==========Section # 4==========
+.section-four
+    text-align: center
+
+    h4
+        color: v.$Very-Dark-Cyan
+        font-size: 2.4rem
+    
+    button
+        margin-top: 50px
+        width: 200px
+        height: 40px
+        border: none
+        border-radius: 50px
+        background-color: v.$Pink
+        color: white
+        font-weight: 600
+        font-size: 1.1rem
+
+        &:hover
+            cursor: pointer
+            background-color: v.$Light-Pink
+
+    @include m.large
+        h4
+            font-size: 4rem
+
+        button
+            width: 340px
+            height: 55px
+            font-size: 1.5rem
+    
+    
